@@ -1,1 +1,2 @@
-# socautomation
+# Security Operations Center Automation Lab
+
