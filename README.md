@@ -16,5 +16,5 @@
 The most important part of this Automated SOC Home Lab is the design and diagramming of this project.
 We have to map this project logically.
 
-![2](https://github.com/chun-eric/socautomation/assets/102393871/e0c647c4-823b-4628-8705-b12d0feb1651)
-![1](https://github.com/chun-eric/socautomation/assets/102393871/30845755-17b9-43b3-bed7-33f956ddcb11)
+<a href="https://ibb.co/Wxw0qBm"><img src="https://i.ibb.co/tmtzkYV/1.png" alt="1" border="0"></a>
+<a href="https://ibb.co/bsTzsND"><img src="https://i.ibb.co/D9h59wT/2.png" alt="2" border="0"></a>
