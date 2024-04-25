@@ -1,6 +1,8 @@
 # Security Operations Center Automation Lab
 
 ## About this project
+This project is an open sourced security operation center automation lab that tries to replicate and gain invaluable experience from what a SOC Analyst would do on a daily basis. It builds the infrastructure of a security operations center, as well providing real-time threats and alerts for a SOC Analyst to triage and remediate. The goal here is to automate as much of the process of what a SOC Analyst would do. We will also be implementing automated scripts for incident response. 
+
 
 ## Tools Used
 - Wazuh for EDR (located in the cloud)
