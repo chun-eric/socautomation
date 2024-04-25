@@ -29,15 +29,15 @@ So what is the logic of this system?
 Let's break it down into simple steps.
 There are a total of 9 steps.
 
-- [1] From a Windows 10 Client (Wazuh Agent) send events to the Wazuh Manager
-- [2] A Wazuh Manager will receive these events from the Internet
-- [3] Alerts will be sent from the Wazuh Manager to Shuffle
-- [4] Shuffle will send these alerts to the Internet to enrich the Indicators of Compromise (IOC) and receive it back
-- [5] Shuffle will then send these IOCs based alerts to TheHive for case management
-- [6] Shuffle will also be notified of these alerts sent to TheHive and will send an email to notifiy an SOC analyst 
-- [7] The email will be sent and received by the SOC Analyst
-- [8] The SOC Analyst will send back a response action which will go back to Shuffle and then to the Wazuh Manager
-- [9] Wazuh Manager will perform a response action to the Windows 10 Client (Wazuh Agent)
+- [1] From a Windows 10 Client (Wazuh Agent) send events to the Wazuh Manager.
+- [2] A Wazuh Manager will receive these events from the Internet.
+- [3] Alerts will be sent from the Wazuh Manager to Shuffle.
+- [4] Shuffle will send these alerts to the Internet to enrich the Indicators of Compromise (IOC) and receive it back.
+- [5] Shuffle will then send these IOCs based alerts to TheHive for case management.
+- [6] Shuffle will also be notified of these alerts sent to TheHive and will send an email to notifiy an SOC analyst.
+- [7] The email will be sent and received by the SOC Analyst.
+- [8] The SOC Analyst will send back a response action which will go back to Shuffle and then to the Wazuh Manager.
+- [9] Wazuh Manager will perform a response action to the Windows 10 Client (Wazuh Agent).
 
 <br/>
 Below is a diagram of the purpose of each machine. 
