@@ -48,3 +48,14 @@ Below is a diagram of the purpose of each machine.
 <br/>
 
 ## Installing Applications & Virtual Machines
+
+We will be installing the following:
+1 Windows 10 VM with Sysmon installed
+1 Wazuh Server
+1 TheHive Server
+
+Wazuh is an open sourced cyber security application that integrates SIEM and XDR capabilities. 
+
+Both Wazuh and TheHive will be using Ubuntu.
+
+
