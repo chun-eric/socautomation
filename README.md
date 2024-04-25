@@ -18,6 +18,7 @@ We have to map this project logically.
 
 <a href="https://ibb.co/h1JTdyP"><img src="https://i.ibb.co/vv6MdH7/1v1.png" alt="1v1" border="0"></a>
 
+
 So what is the logic of this system?
 
 Let's break it down into simple steps.
