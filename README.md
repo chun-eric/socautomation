@@ -14,8 +14,9 @@
 ## Designing the Lab
 
 The most important part of this Automated SOC Home Lab is the design and diagramming of this project.
-We have to map this project logically.
+We have to map this project logically. Please see diagram below.
 
+<br/>
 <a href="https://ibb.co/h1JTdyP"><img src="https://i.ibb.co/vv6MdH7/1v1.png" alt="1v1" border="0"></a>
 
 
