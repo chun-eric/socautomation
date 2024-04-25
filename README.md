@@ -17,4 +17,9 @@ The most important part of this Automated SOC Home Lab is the design and diagram
 We have to map this project logically.
 
 <a href="https://ibb.co/Wxw0qBm"><img src="https://i.ibb.co/tmtzkYV/1.png" alt="1" border="0"></a>
+
+So what is the logic of this system?
+Let's break it down into simple steps.
+[-] 
+
 <a href="https://ibb.co/bsTzsND"><img src="https://i.ibb.co/D9h59wT/2.png" alt="2" border="0"></a>
