@@ -42,3 +42,6 @@ Below is a diagram of the purpose of each machine.
 
 <br/>
 <a href="https://ibb.co/Hx5Z7DS"><img src="https://i.ibb.co/Gtzm7v6/2v2.png" alt="2v2" border="0"></a>
+
+
+## Installing Applications & Virtual Machines
