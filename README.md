@@ -12,7 +12,7 @@ This project is an open sourced security operation center automation lab that tr
 - 1 PC or Virtual Machine
 - 2 Servers
   
-
+<br/>
 ## Designing the Lab
 
 The most important part of this Automated SOC Home Lab is the design and diagramming of this project.
@@ -43,5 +43,5 @@ Below is a diagram of the purpose of each machine.
 <br/>
 <a href="https://ibb.co/Hx5Z7DS"><img src="https://i.ibb.co/Gtzm7v6/2v2.png" alt="2v2" border="0"></a>
 
-
+<br/>
 ## Installing Applications & Virtual Machines
