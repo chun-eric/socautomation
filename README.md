@@ -115,6 +115,42 @@ https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon#introduction
 Click > Download Sysmon
 ```
 
+This will be in a zipped file. Extract all. 
+
+We need to go to a Github repo called sysmon-moular and download the file
+called sysmonconfig.
+
+```
+https://github.com/olafhartong/sysmon-modular/blob/master/sysmonconfig.xml
+```
+
+<a href="https://ibb.co/Hx5Z7DS"><img src="https://i.ibb.co/Gtzm7v6/2v2.png" alt="3" border="0"></a>
+
+Save the file as Right-click > Save As > Name it Sysmon.config
+
+Copy the Sysmon.config file and paste it into the Sysmon folder we just extracted.
+
+Open the file as Administrator through Powershell.
+In Powershell you have to be in the same directory as the extracted files. 
+
+So our file path is:
+```
+[Add file path here]
+```
+
+In Powershell type:
+```
+cd "[file path]"
+```
+
+Now that you are in the correct directory in the Sysmon folder with the Sysmon.config file also inside,
+look at the contents of the folder
+by typing:
+```
+dir
+```
+
+
 
 
 
