@@ -61,15 +61,47 @@ TheHive is an open source security incident response platform. TheHive will be o
 
 Both Wazuh and TheHive will be using Ubuntu.
 
-We will use a Windows 10 VM with Ubuntu installed as our client machine. 
+We will use a Windows 10 VM with Ubuntu installed as our client machine. This Windows VM will also have Sysmon installed. 
 
-First install a Windows VM through Virtual Box.
+What is Sysmon? Sysmon is short for System Monitor and is developed by Microsoft. 
+In a nutshell, Sysmon it helps track and log important activities on a Windows computer, 
+especially processes, network connections, and changes to files or registry keys. 
+
+
+### First install a Windows VM through Virtual Box.
 Here are the specs for the Windows VM:
 - [X] 8 gigabytes of memory
 - [X] 70 gibabytes of HDD
 - [X] Skipped unattended install
 
 Go through the installation process.
+Verify the SHA256 checksum with powershell.
+In a powershell window type:
+
+```
+Get-FileHash ./{name of the virtualbox.exe}
+```
+
+Your Hash is generated.
+Copy and paste it in the virtualbox SHA256 hashes to ensure it is there. 
+
+If it is there that means there was no change during transit. 
+
+Now that the Virtual Box program is safe to use, install VirtualBox. 
+Download any dependencies and missing redistributables to ensure VirtualBox compatibility with Windows 10 VM.
+
+Go through the installation process to finish installing Virtual Box. 
+
+Once Virtual Box is installed go to:
+
+```
+Windows 10 installation media link > Download Tool Now
+```
+
+This will create a Windows ISO image file. 
+Make sure to choose > ```Create installation medai for another PC```
+
+choose the: ```ISO file```
 
 ```
 Select > I don't have a product key
@@ -77,6 +109,7 @@ Accept Windows 10 Pro.
 Select > Custom Install
 ```
 
+### Creating a Windows VM in VirtualBox
 The installation might take a while. 
 Now you have to install "Guest Additions"
 
@@ -109,6 +142,9 @@ including signs of malicious activity.
 
 Time to install Sysmon.
 
+![image](https://github.com/user-attachments/assets/7f7857a9-79d5-490c-9f75-78ef2803a870)
+
+
 This is a bit trickier than I thought.
 
 Go to Microsoft's Sysmon download url:
@@ -131,29 +167,81 @@ https://github.com/olafhartong/sysmon-modular/blob/master/sysmonconfig.xml
 
 <a href="https://ibb.co/Hx5Z7DS"><img src="https://i.ibb.co/Gtzm7v6/2v2.png" alt="3" border="0"></a>
 
-Save the file as Right-click > Save As > Name it Sysmon.config
+![image](https://github.com/user-attachments/assets/147a40c3-e07b-41d5-8718-9a348bf0b79b)
 
-Copy the Sysmon.config file and paste it into the Sysmon folder we just extracted.
+```
+Save the file as Right-click > Save As > Name it sysmonconfig
+```
+
 
 Open the file as Administrator through Powershell.
+
+![image](https://github.com/user-attachments/assets/c0a1e30e-bda0-4157-83ca-0f62176db078)
+
 In Powershell you have to be in the same directory as the extracted files. 
 
-So our file path is:
-```
-[Add file path here]
-```
 
 In Powershell type:
 ```
-cd "[file path]"
+cd "[copy file path]"
 ```
 
-Now that you are in the correct directory in the Sysmon folder with the Sysmon.config file also inside,
+Copy the sysmonconfig.xml into the extracted files folder. It should look like this.
+
+![image](https://github.com/user-attachments/assets/491db250-b118-4c44-b6c2-2fdecb075f2a)
+
+
+Now that you are in the correct directory in the Sysmon folder with the sysmonconfig file also inside,
 look at the contents of the folder
 by typing:
 ```
 dir
 ```
+
+![image](https://github.com/user-attachments/assets/57ab5019-2350-4bfc-9b6a-4825197ad38e)
+
+We need to check that sysmon is installed properly. 
+
+Go to: ```Services > type Sysmon```
+
+![image](https://github.com/user-attachments/assets/da1808e0-9bc6-4967-9255-52ad0ec849f1)
+
+Alternatively you can go to: ```Event Viewer > Application and Services Logs > Microsoft > Windows```
+
+![image](https://github.com/user-attachments/assets/a1964616-6fc3-42eb-92df-27021c0d1d27)
+
+
+Currently there is no Sysmon installed.
+
+
+Now we need to make sure Sysmon is installed. 
+
+In Powershell type in the following command:
+```
+.\sysmon64.exe -i sysmonconfig.xml
+```
+
+The above command means install sysmon with the configuration file. 
+The configuration file will log events based on rules such process creation, network connections, file changes etc..
+
+![image](https://github.com/user-attachments/assets/a686eaec-c667-498e-a5c3-5bc3401a915b)
+
+
+Double check that sysmon is installed. 
+
+![image](https://github.com/user-attachments/assets/c97db395-e4fd-4153-866e-3fb7eb502516)
+
+![image](https://github.com/user-attachments/assets/4726733b-9fa3-40f1-b062-802855eae213)
+
+
+Now that Sysmon is installed. We can start setting up Wazuh next. 
+
+### Installing Wazuh 
+
+
+
+
+
 
 
 
