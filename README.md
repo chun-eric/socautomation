@@ -54,9 +54,14 @@ We will be installing the following:
 1 Wazuh Server
 1 TheHive Server
 
-Wazuh is an open sourced cyber security application that integrates SIEM and XDR capabilities. 
+Wazuh is an open source cyber security application that integrates SIEM and XDR capabilities. 
+The main components of Wazuh is the indexer, server and dashboard.
+
+TheHive is an open source security incident response platform. TheHive will be our case management system.
 
 Both Wazuh and TheHive will be using Ubuntu.
+
+We will use a Windows 10 VM with Ubuntu installed as our client machine. 
 
 First install a Windows VM through Virtual Box.
 Here are the specs for the Windows VM:
